@@ -1,5 +1,5 @@
 # EvoOs
-the Electronic Voice Operated Operating System
+*The Electronic Voice Operated Operating System*
 
 Our plan...
 
