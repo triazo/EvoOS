@@ -4,7 +4,6 @@ THIS IS THE DEV BRANCH!!!!!
 the Electronic Voice Operated Operating System
 
 Our plan...
--- Saturday March 21 02:44:56 --
 
 ##Have a central messaging core (EVOS MAIN)
      
@@ -52,5 +51,5 @@ Most command things register three parts:
 
 ##Essential Modules
 
-##JuliusCompiler
+###JuliusCompiler
    listens for database update events, and when one is recieved, it
