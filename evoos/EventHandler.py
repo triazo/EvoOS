@@ -1,6 +1,8 @@
 #! /usr/bin/python
 
 import json
+from util.network import notifyEvent
+from util.error import ErrorLog
 
 """
 	Event Handler
@@ -51,6 +53,41 @@ class EventHandler:
 		else:
 			#Event doesn't exist...
 			ErrorFile.write("EventHander: unRegError {0} tried to unregister {1} which does not exist.".format(lid, eid))
+
+
+
+	def triggerEvent(self, eid, meta):
+		#Notifies listeners registered to the specific event.
+		if (eid in self.EventList.keys()):
+			for (module in self.EventList[eid]):
+				notifyEvent(eid, meta)
+
+		else:	
+			#Event doesn't have any listeners.
+			ErrorFile.write("EventHander: TriggerEvent {0} was called but has no listeners.".format(eid))
+
+
+
+	
+	def recievedEvent(self, eid, meta)
+		#Called when routines recieves a connection/event call.
+		#Check to see if it is one of our two special events, addListener, removeListener.
+		#TODO: Seperate permissions so one module can't remove all others.
+
+		if (eid == "addListener"):
+			pass		
+
+		elif (eid == "removeListener"):
+			pass
+		
+		else:
+			triggerEvent(eid, meta)
+
+
+
+	def startDispacher(self):
+		#self.listenForEvents()
+		pass
 
 
 	def __init__(self):
