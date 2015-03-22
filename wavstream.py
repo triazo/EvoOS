@@ -17,7 +17,7 @@ p = pyaudio.PyAudio()
 # open stream (2)
 """
     This is important, the below values need to be replaced with those particular to the file.
-    I'm working on a simple protocol to send these but have been to lazy to actually make it as for now.
+    I'm working on a simple protocol to send these but have been too lazy to actually make it as for now.
 """
 stream = p.open(format=p.get_format_from_width(2), channels=2, rate=44100, output=True)
 
