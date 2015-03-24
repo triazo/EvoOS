@@ -95,7 +95,7 @@ class EvoOSMain(EvModule):
         
                 
     def start_dispatcher(self, port=51101):
-        self.dispatcher.start_dispatcher()
+        self.dispatcher.startDispatcher()
         
         
         
