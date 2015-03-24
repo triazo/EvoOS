@@ -1,6 +1,9 @@
 import json
 
 def digestEvent(event):
+    #Breaks down event and cuts out the first four bytes used to calculate the size.
+    event = event[4:] 
+
     decoded = json.loads(event)
     #DEBUG2
     #print decoded

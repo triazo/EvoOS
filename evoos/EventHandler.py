@@ -88,7 +88,7 @@ class EventHandler:
             self.removeListenerToEvent(lid, cbeid) 
         
         else:
-            self.triggerEvent(eid, meta)
+            self.triggerEvent(eid, event)
 
 
 
@@ -117,7 +117,7 @@ class EventHandler:
             #DEBUG2
             #print "Received message of length {0}: {1}".format(mesgLength, meta)
             
-            self.receivedEvent(meta)
+            self.receivedEvent(mesgFirst+meta)
             respSocket.close()
       
 
