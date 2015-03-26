@@ -12,4 +12,11 @@ if (len(sys.argv) == 2):
         import evoos.test.ModuleEventTest
         exit()
 
-print "\tUsage: python setup.py [ test ]"
+    elif (sys.argv[1] == "run"):
+        from evoos.EventHandler import EventHandler
+        e = EventHandler()
+        print "Starting EvoOS."
+        e.startDispatcher() 
+        exit()
+
+print "\tUsage: python setup.py [ test | send | run ]"

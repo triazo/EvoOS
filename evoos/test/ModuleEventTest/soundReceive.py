@@ -8,6 +8,8 @@ import socket
 import json    
 import struct
 
+evoosip = "127.0.0.1"
+myip = "127.0.0.1"
 
 #Send sample data.
 def sendEvent(e):
@@ -18,7 +20,7 @@ def sendEvent(e):
     msg = 3*chr(0)+chr(len(msg))+msg
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(("127.0.0.1", 51101))
+    s.connect((evoosip, 51101))
     s.sendall(msg)
     s.close()
 
@@ -63,7 +65,7 @@ class receiveAudio:
     def logIntoEvoOS(self):
         event = {}
         event["event"] = "addListener"
-        event["lid"] = "127.0.0.1:4001"
+        event["lid"] = myip+":4001"
         event["cbeid"] = "startStream" #cbied is the event we are adding a listener to
         sendEvent(event)
  
