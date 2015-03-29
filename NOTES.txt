@@ -1,0 +1,9 @@
+NOTES:
+
+So far we have a basic streaming demo up:
+    TODO:
+        Actually support ipv6
+        Support sending messages over 256bytes.
+        Auto EvoOS discovery.
+        Figure out what my ip is!
+        Add wav meta data into protocol.

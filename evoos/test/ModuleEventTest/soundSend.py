@@ -10,7 +10,7 @@ import struct
 
 
 evoosip = "128.113.192.219"
-evoosip = "127.0.0.1"
+#evoosip = "127.0.0.1"
 myip = "127.0.0.1"
 
 #Send sample data.
