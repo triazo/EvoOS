@@ -78,6 +78,8 @@ class EventHandler:
         #Check to see if it is one of our two special events, addListener, removeListener.
         #TODO: Seperate permissions so one module can't remove all others.
 
+        self.ErrorLogger.write("EventHandler: Received event:i " + str(event))
+
         #Eid = event type, meta = plain text of original event.
         eid, meta, lid, cbeid = digestEvent(event)
 
@@ -96,6 +98,8 @@ class EventHandler:
         EventSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         EventSocket.bind(("", 51101))
         EventSocket.listen(10)
+
+        self.ErrorLogger.write("EventHandler: Displatcher up on Port 51101")
 
         #Block and listen for requests, should probably spawn a new thread but since out other modules are threaded I can block here.
 

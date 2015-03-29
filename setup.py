@@ -14,7 +14,9 @@ if (len(sys.argv) == 2):
 
     elif (sys.argv[1] == "run"):
         from evoos.EventHandler import EventHandler
+        from evoos.util.error import ErrorLog
         e = EventHandler()
+        e.ErrorLogger = ErrorLog()
         print "Starting EvoOS."
         e.startDispatcher() 
         exit()
