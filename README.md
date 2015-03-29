@@ -1,3 +1,9 @@
+##Messages
+
+The repo is configured to use tin as evoos main when running the send command.
+
+
+
 # EvoOs
 *The Electronic Voice Operated Operating System*
 

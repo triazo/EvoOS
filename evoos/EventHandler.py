@@ -64,7 +64,11 @@ class EventHandler:
         #Notifies listeners registered to the specific event.
         if (eid in self.EventList.keys()):
             for module in self.EventList[eid]:
-                notifyEvent(module, meta)
+                try:
+                    notifyEvent(module, meta)
+
+                except socket.error:
+                    self.ErrorLogger.write("EventHandler: triggerEventError tried to notify {0} but connect was refused.\n Message: {1}".format(module, meta)
 
         else:    
             #Event doesn't have any listeners.

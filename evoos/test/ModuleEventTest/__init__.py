@@ -22,9 +22,10 @@ def startReceiving():
     receive.run()
 
 def startDispatcher():
-    e = EventHandler()
-    e.ErrorLogger = ErrorLog()
-    e.startDispatcher()
+    pass
+    #e = EventHandler()
+    #e.ErrorLogger = ErrorLog()
+    #e.startDispatcher()
 
 print "Preforming Module Test."
 thread.start_new_thread(startDispatcher, ())
